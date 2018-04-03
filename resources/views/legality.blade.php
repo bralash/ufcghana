@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Welcome | UFC Ghana</title>
+    <title>Legality | UFC Ghana</title>
     <link href="{{URL::asset('css/style.css')}}" rel="stylesheet">
     <link href="{{URL::asset('css/responsive.css')}}" rel="stylesheet">
 
