@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Mirrored from demo.designing-world.com/blink3/blink/index-business.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Mar 2018 03:28:45 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -55,7 +52,13 @@
                                     <a class="nav-link" href="#about">About</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="#faq">FAQs</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="#contact">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" target="_blank" href="legality">Legality</a>
                                 </li>
                             </ul>
                             <div class="sing-up-button pull-right">
@@ -183,15 +186,13 @@
     <div class="product-thumbnail-area item" style="background-image: url(img/bg-img/product-2.jpg);"></div>
 </section>
 <!-- ***** Feature Area End ***** -->
-
-<!-- ***** Our Service Area Start ***** -->
 <section class="our-service-area bg-white section_padding_90_50 clearfix">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <!-- Heading Text -->
                 <div class="section-heading text-center">
-                    <h2>Why choose us</h2>
+                    <h2>How it works</h2>
                     <p>
                         Write some small introduction. Like there are a lot of p2p systems out there and these are the
                         reasons people should choose yours
@@ -202,56 +203,124 @@
 
         <div class="row">
             <!-- Single Service Start -->
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-service text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <i class="ti-blackboard"></i>
-                    <h5>Awesome Experience</h5>
-                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img src="{{URL::asset('img/register.png')}}" alt="">
+                    <h5>Register</h5>
+                    <p>
+                        Fill the registration form by providing your needed details. Bank details
+                         cannot be changed afterwards, for security reasons.
+                    </p>
                 </div>
             </div>
             <!-- Single Service Start -->
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-service text-center wow fadeInUp" data-wow-delay="0.4s">
-                    <i class="ti-rocket"></i>
-                    <h5>Fast and Simple</h5>
-                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img src="{{URL::asset('img/ph.png')}}" alt="">
+                    <h5>PROVIDE HELP (PH)</h5>
+                    <p>
+                        You accept to provide help (PH) to the community through your back office.
+                        You click on the Provide Help (PH) button to enter the amount you wish to
+                        provide to the community. You will be matched to a corresponding participant
+                        after pledge has been made and payment has to be made 0-24 hours.
+                    </p>
                 </div>
             </div>
             <!-- Single Service Start -->
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-service text-center wow fadeInUp" data-wow-delay="0.6s">
-                    <i class="ti-layout-grid2-alt"></i>
-                    <h5>Clean Code</h5>
-                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img src="{{URL::asset('img/upload.png')}}" alt="">
+                    <h5>UPLOAD PROOF OF PAYMENT (POP)</h5>
+                    <p>
+                        After successfully making payment, participant are required to upload
+                        the proof of the payment by taking a screen shot of the transaction made.
+                    </p>
                 </div>
             </div>
             <!-- Single Service Start -->
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-service text-center wow fadeInUp" data-wow-delay="0.8s">
-                    <i class="ti-folder"></i>
-                    <h5>Projects Planing</h5>
-                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-            <!-- Single Service Start -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-service text-center wow fadeInUp" data-wow-delay="1s">
-                    <i class="ti-check-box"></i>
-                    <h5>Live Chatbox</h5>
-                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-            <!-- Single Service Start -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-service text-center wow fadeInUp" data-wow-delay="1.2s">
-                    <i class="ti-headphone"></i>
-                    <h5>24/7 Online Support</h5>
-                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img src="{{URL::asset('img/gh.png')}}" alt="">
+                    <h5>GET HELP(GH)</h5>
+                    <p>
+                        The maturity date of your reward is 7 days after a successful
+                        PH has been made, participant can now GET HELP (GH) their matured reward by
+                        clicking on the GET HELP BUTTON. Participants are to recommit 100% of their
+                        next PH to GH their reward. Remember SUSTAINABILITY IS OUR HALLMARK.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- ***** Our Service Area Start ***** -->
+{{--<section class="our-service-area bg-white section_padding_90_50 clearfix">--}}
+    {{--<div class="container">--}}
+        {{--<div class="row">--}}
+            {{--<div class="col-12">--}}
+                {{--<!-- Heading Text -->--}}
+                {{--<div class="section-heading text-center">--}}
+                    {{--<h2>Why choose us</h2>--}}
+                    {{--<p>--}}
+                        {{--Write some small introduction. Like there are a lot of p2p systems out there and these are the--}}
+                        {{--reasons people should choose yours--}}
+                    {{--</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+
+        {{--<div class="row">--}}
+            {{--<!-- Single Service Start -->--}}
+            {{--<div class="col-12 col-sm-6 col-lg-4">--}}
+                {{--<div class="single-service text-center wow fadeInUp" data-wow-delay="0.2s">--}}
+                    {{--<i class="ti-blackboard"></i>--}}
+                    {{--<h5>Awesome Experience</h5>--}}
+                    {{--<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<!-- Single Service Start -->--}}
+            {{--<div class="col-12 col-sm-6 col-lg-4">--}}
+                {{--<div class="single-service text-center wow fadeInUp" data-wow-delay="0.4s">--}}
+                    {{--<i class="ti-rocket"></i>--}}
+                    {{--<h5>Fast and Simple</h5>--}}
+                    {{--<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<!-- Single Service Start -->--}}
+            {{--<div class="col-12 col-sm-6 col-lg-4">--}}
+                {{--<div class="single-service text-center wow fadeInUp" data-wow-delay="0.6s">--}}
+                    {{--<i class="ti-layout-grid2-alt"></i>--}}
+                    {{--<h5>Clean Code</h5>--}}
+                    {{--<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<!-- Single Service Start -->--}}
+            {{--<div class="col-12 col-sm-6 col-lg-4">--}}
+                {{--<div class="single-service text-center wow fadeInUp" data-wow-delay="0.8s">--}}
+                    {{--<i class="ti-folder"></i>--}}
+                    {{--<h5>Projects Planing</h5>--}}
+                    {{--<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<!-- Single Service Start -->--}}
+            {{--<div class="col-12 col-sm-6 col-lg-4">--}}
+                {{--<div class="single-service text-center wow fadeInUp" data-wow-delay="1s">--}}
+                    {{--<i class="ti-check-box"></i>--}}
+                    {{--<h5>Live Chatbox</h5>--}}
+                    {{--<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<!-- Single Service Start -->--}}
+            {{--<div class="col-12 col-sm-6 col-lg-4">--}}
+                {{--<div class="single-service text-center wow fadeInUp" data-wow-delay="1.2s">--}}
+                    {{--<i class="ti-headphone"></i>--}}
+                    {{--<h5>24/7 Online Support</h5>--}}
+                    {{--<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</section>--}}
 <!-- ***** Our Service Area End ***** -->
 
 <!-- ***** More fearutes  Area Start ***** -->
@@ -696,7 +765,7 @@
     {{--</div>--}}
 {{--</section>--}}
 <!-- ***** More fearutes Area End ***** -->
-<section class="frequently_asked_question section_padding_90_100 clearfix">
+<section class="frequently_asked_question section_padding_90_100 clearfix" id="faq">
     <div class="container">
         <div class="row">
             <!-- Heading Text  -->
@@ -1334,18 +1403,18 @@
 <!-- ***** Footer Area End ***** -->
 
 <!-- jQuery-2.2.4 js -->
-<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<script src="{{URL::asset('js/jquery/jquery-2.2.4.min.js')}}"></script>
 <!-- Popper js -->
-<script src="js/bootstrap/popper.min.js"></script>
+<script src="{{URL::asset('js/bootstrap/popper.min.js')}}"></script>
 <!-- Bootstrap js -->
-<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="{{URL::asset('js/bootstrap/bootstrap.min.js')}}"></script>
 <!-- All Plugins js -->
-<script src="js/plugins/plugins.js"></script>
+<script src="{{URL::asset('js/plugins/plugins.js')}}"></script>
 <!-- Google Maps -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
-<script src="js/map-active.js"></script>
+<script src="{{URL::asset('js/map-active.js')}}"></script>
 <!-- Active js -->
-<script src="js/active.js"></script>
+<script src="{{URL::asset('js/active.js')}}"></script>
 </body>
 
 
