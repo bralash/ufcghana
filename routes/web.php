@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::group(['middleware' =>['web']], function() {
+    Route::get('/', 'PagesController@index');
+    Route::get('legality', 'PagesController@legality');
+    Route::get('signup','PagesController@signUp');
 
-Route::get('/legality', function() {
-    return view('legality');
+    Route::group(['prefix' => 'auth'], function() {
+        Route::post('signup', 'UserController@signup');
+    });
 });

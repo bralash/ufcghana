@@ -22,14 +22,6 @@
 </head>
 
 <body>
-<!-- Preloader Start -->
-{{--<div id="preloader">--}}
-    {{--<div class="spinner">--}}
-        {{--<div class="bounce1"></div>--}}
-        {{--<div class="bounce2"></div>--}}
-        {{--<div class="bounce3"></div>--}}
-    {{--</div>--}}
-{{--</div>--}}
 
 <!-- ***** Header Area Start ***** -->
 <header class="header_area">
@@ -62,7 +54,7 @@
                                 </li>
                             </ul>
                             <div class="sing-up-button pull-right">
-                                <a href="#" class="btn">Sign Up</a>
+                                <a href="{{URL::to('signup')}}" class="btn">Sign Up</a>
                             </div>
                         </div>
                     </nav>
@@ -82,16 +74,9 @@
                 <div class="subscribe--content">
                     <h2>Welcome to UFC Ghana</h2>
                     <p>
-                        Some nice and sensible text goes here
+                        We are here to give you financial freedom through peer-to-peer donation
                     </p>
                 </div>
-
-                {{--<!-- Form Start -->--}}
-                {{--<form action="#" method="post">--}}
-                    {{--<input type="email" class="subscribe-email" placeholder="Enter your email address">--}}
-                    {{--<button type="submit"><i class="pe-7s-angle-right"></i></button>--}}
-                {{--</form>--}}
-                {{--<!-- Form End -->--}}
             </div>
         </div>
     </div>
@@ -121,7 +106,7 @@
 
 <!-- ***** Feature Area Start ***** -->
 <section class="feature-area clearfix" id="product">
-    <div class="feature--content-area section_padding_90_100 item">
+    <div class="feature--content-area section_padding_0_100 item">
         <!-- Service Details -->
         <div class="service-details-meta">
             <!-- Section Heading Area -->
@@ -150,7 +135,8 @@
                     <div class="single_feature_text">
                         <h5>Security</h5>
                         <p>
-                            Write something about security
+                            Our system is well secured where participants can donate and
+                            receive freely.
                         </p>
                         <h2>01</h2>
                     </div>
@@ -163,7 +149,10 @@
                     <!-- Single Feature Text -->
                     <div class="single_feature_text">
                         <h5>Trust</h5>
-                        <p>Write something about trust</p>
+                        <p>
+                            We are here to build broken trust in peer-to-peer
+                            donation.
+                        </p>
                         <h2>02</h2>
                     </div>
                 </div>
@@ -175,7 +164,9 @@
                     <!-- Single Feature Text -->
                     <div class="single_feature_text">
                         <h5>Support</h5>
-                        <p>Write something about support</p>
+                        <p>
+                            We give responsive support to participants 24/7
+                        </p>
                         <h2>03</h2>
                     </div>
                 </div>
@@ -193,10 +184,6 @@
                 <!-- Heading Text -->
                 <div class="section-heading text-center">
                     <h2>How it works</h2>
-                    <p>
-                        Write some small introduction. Like there are a lot of p2p systems out there and these are the
-                        reasons people should choose yours
-                    </p>
                 </div>
             </div>
         </div>
@@ -209,7 +196,7 @@
                     <h5>Register</h5>
                     <p>
                         Fill the registration form by providing your needed details. Bank details
-                         cannot be changed afterwards, for security reasons.
+                        cannot be changed afterwards, for security reasons.
                     </p>
                 </div>
             </div>
@@ -217,12 +204,12 @@
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-service text-center wow fadeInUp" data-wow-delay="0.4s">
                     <img src="{{URL::asset('img/ph.png')}}" alt="">
-                    <h5>PROVIDE HELP (PH)</h5>
+                    <h5>Provide Help (PH)</h5>
                     <p>
                         You accept to provide help (PH) to the community through your back office.
                         You click on the Provide Help (PH) button to enter the amount you wish to
                         provide to the community. You will be matched to a corresponding participant
-                        after pledge has been made and payment has to be made 0-24 hours.
+                        after pledge has been made and payment has to be made withing 24 hours.
                     </p>
                 </div>
             </div>
@@ -253,757 +240,6 @@
         </div>
     </div>
 </section>
-<!-- ***** Our Service Area Start ***** -->
-{{--<section class="our-service-area bg-white section_padding_90_50 clearfix">--}}
-    {{--<div class="container">--}}
-        {{--<div class="row">--}}
-            {{--<div class="col-12">--}}
-                {{--<!-- Heading Text -->--}}
-                {{--<div class="section-heading text-center">--}}
-                    {{--<h2>Why choose us</h2>--}}
-                    {{--<p>--}}
-                        {{--Write some small introduction. Like there are a lot of p2p systems out there and these are the--}}
-                        {{--reasons people should choose yours--}}
-                    {{--</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<div class="row">--}}
-            {{--<!-- Single Service Start -->--}}
-            {{--<div class="col-12 col-sm-6 col-lg-4">--}}
-                {{--<div class="single-service text-center wow fadeInUp" data-wow-delay="0.2s">--}}
-                    {{--<i class="ti-blackboard"></i>--}}
-                    {{--<h5>Awesome Experience</h5>--}}
-                    {{--<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<!-- Single Service Start -->--}}
-            {{--<div class="col-12 col-sm-6 col-lg-4">--}}
-                {{--<div class="single-service text-center wow fadeInUp" data-wow-delay="0.4s">--}}
-                    {{--<i class="ti-rocket"></i>--}}
-                    {{--<h5>Fast and Simple</h5>--}}
-                    {{--<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<!-- Single Service Start -->--}}
-            {{--<div class="col-12 col-sm-6 col-lg-4">--}}
-                {{--<div class="single-service text-center wow fadeInUp" data-wow-delay="0.6s">--}}
-                    {{--<i class="ti-layout-grid2-alt"></i>--}}
-                    {{--<h5>Clean Code</h5>--}}
-                    {{--<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<!-- Single Service Start -->--}}
-            {{--<div class="col-12 col-sm-6 col-lg-4">--}}
-                {{--<div class="single-service text-center wow fadeInUp" data-wow-delay="0.8s">--}}
-                    {{--<i class="ti-folder"></i>--}}
-                    {{--<h5>Projects Planing</h5>--}}
-                    {{--<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<!-- Single Service Start -->--}}
-            {{--<div class="col-12 col-sm-6 col-lg-4">--}}
-                {{--<div class="single-service text-center wow fadeInUp" data-wow-delay="1s">--}}
-                    {{--<i class="ti-check-box"></i>--}}
-                    {{--<h5>Live Chatbox</h5>--}}
-                    {{--<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<!-- Single Service Start -->--}}
-            {{--<div class="col-12 col-sm-6 col-lg-4">--}}
-                {{--<div class="single-service text-center wow fadeInUp" data-wow-delay="1.2s">--}}
-                    {{--<i class="ti-headphone"></i>--}}
-                    {{--<h5>24/7 Online Support</h5>--}}
-                    {{--<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</section>--}}
-<!-- ***** Our Service Area End ***** -->
-
-<!-- ***** More fearutes  Area Start ***** -->
-{{--<section class="more-feature-area clearfix" id="feature">--}}
-    {{--<div class="feature-thumbnail-area item" style="background-image: url(img/bg-img/feature-1.jpg);"></div>--}}
-    {{--<!-- Feature Content Area -->--}}
-    {{--<div class="feature-content-area section_padding_90_100 item">--}}
-        {{--<!-- Service Details -->--}}
-        {{--<div class="service-details">--}}
-            {{--<!-- Section Heading Area -->--}}
-            {{--<div class="section-heading">--}}
-                {{--<h2>See Few Core Features About this Business</h2>--}}
-                {{--<p>Everything that we know about our reality comes by way of our senses. In other words, our entire experience of reality is simply a combination of sensory information.</p>--}}
-            {{--</div>--}}
-            {{--<div class="feature_area">--}}
-                {{--<!-- Single Feature -->--}}
-                {{--<div class="single_feature">--}}
-                    {{--<!-- Feature Icon -->--}}
-                    {{--<div class="feature_icon">--}}
-                        {{--<i class="ti-clipboard"></i>--}}
-                    {{--</div>--}}
-                    {{--<!-- Single Feature Text -->--}}
-                    {{--<div class="single_feature_text">--}}
-                        {{--<h5>Projects Planing</h5>--}}
-                        {{--<p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales.</p>--}}
-                        {{--<h2>04</h2>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<!-- Single Feature -->--}}
-                {{--<div class="single_feature">--}}
-                    {{--<!-- Feature Icon -->--}}
-                    {{--<div class="feature_icon">--}}
-                        {{--<i class="ti-alarm-clock"></i>--}}
-                    {{--</div>--}}
-                    {{--<!-- Single Feature Text -->--}}
-                    {{--<div class="single_feature_text">--}}
-                        {{--<h5>Super Fast Work</h5>--}}
-                        {{--<p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales.</p>--}}
-                        {{--<h2>05</h2>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<!-- Single Feature -->--}}
-                {{--<div class="single_feature">--}}
-                    {{--<!-- Feature Icon -->--}}
-                    {{--<div class="feature_icon">--}}
-                        {{--<i class="ti-camera"></i>--}}
-                    {{--</div>--}}
-                    {{--<!-- Single Feature Text -->--}}
-                    {{--<div class="single_feature_text">--}}
-                        {{--<h5>Super HD Camera</h5>--}}
-                        {{--<p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales.</p>--}}
-                        {{--<h2>06</h2>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</section>--}}
-<!-- ***** More fearutes Area End ***** -->
-
-<!-- ***** Our Creative Portfolio Area Start ***** -->
-{{--<section class="our_creative_portfolio section_padding_90_100 clearfix" id="work">--}}
-    {{--<div class="container">--}}
-        {{--<div class="row">--}}
-            {{--<div class="col-12">--}}
-                {{--<!-- Heading Text -->--}}
-                {{--<div class="section-heading text-center">--}}
-                    {{--<h2>Our Creative Portfolio</h2>--}}
-                    {{--<p>Everything that we know about our reality comes by way of our senses. In other words, our entire experience of reality is simply.</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-
-    {{--<div class="gallery_menu">--}}
-        {{--<div class="text-center portfolio-menu">--}}
-            {{--<button class="active btn btn-md" type="button" data-filter="*">All</button>--}}
-            {{--<button class="btn btn-md" type="button" data-filter=".design">Design</button>--}}
-            {{--<button class="btn btn-md" type="button" data-filter=".art">Art</button>--}}
-            {{--<button class="btn btn-md" type="button" data-filter=".oth">Others</button>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-
-    {{--<div class="gallery_full_width_images_area clearfix">--}}
-
-        {{--<!-- Single gallery Item -->--}}
-        {{--<div class="design portfolio_gallery_iteam">--}}
-            {{--<img src="img/portfolio/gallery-1.jpg" alt="">--}}
-            {{--<!-- single Content-->--}}
-            {{--<div class="single_content">--}}
-                {{--<div class="border-layer">--}}
-                    {{--<div class="blink-table">--}}
-                        {{--<div class="blink-table-cell">--}}
-                            {{--<!-- Project Title-->--}}
-                            {{--<div class="project_title">--}}
-                                {{--<a href="#">Project Title</a>--}}
-                                {{--<p>Our all creative project and clean design show at a glance here</p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<!-- Single gallery Item -->--}}
-        {{--<div class="art portfolio_gallery_iteam">--}}
-            {{--<img src="img/portfolio/gallery-2.jpg" alt="">--}}
-            {{--<!-- single Content-->--}}
-            {{--<div class="single_content">--}}
-                {{--<div class="border-layer">--}}
-                    {{--<div class="blink-table">--}}
-                        {{--<div class="blink-table-cell">--}}
-                            {{--<!-- Project Title-->--}}
-                            {{--<div class="project_title">--}}
-                                {{--<a href="#">Project Title</a>--}}
-                                {{--<p>Our all creative project and clean design show at a glance here</p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<!-- Single gallery Item -->--}}
-        {{--<div class="oth portfolio_gallery_iteam">--}}
-            {{--<img src="img/portfolio/gallery-3.jpg" alt="">--}}
-            {{--<!-- single Content-->--}}
-            {{--<div class="single_content">--}}
-                {{--<div class="border-layer">--}}
-                    {{--<div class="blink-table">--}}
-                        {{--<div class="blink-table-cell">--}}
-                            {{--<!-- Project Title-->--}}
-                            {{--<div class="project_title">--}}
-                                {{--<a href="#">Project Title</a>--}}
-                                {{--<p>Our all creative project and clean design show at a glance here</p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<!-- Single gallery Item -->--}}
-        {{--<div class="design art portfolio_gallery_iteam">--}}
-            {{--<img src="img/portfolio/gallery-4.jpg" alt="">--}}
-            {{--<!-- single Content-->--}}
-            {{--<div class="single_content">--}}
-                {{--<div class="border-layer">--}}
-                    {{--<div class="blink-table">--}}
-                        {{--<div class="blink-table-cell">--}}
-                            {{--<!-- Project Title-->--}}
-                            {{--<div class="project_title">--}}
-                                {{--<a href="#">Project Title</a>--}}
-                                {{--<p>Our all creative project and clean design show at a glance here</p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<!-- Single gallery Item -->--}}
-        {{--<div class="oth portfolio_gallery_iteam">--}}
-            {{--<img src="img/portfolio/gallery-5.jpg" alt="">--}}
-            {{--<!-- single Content-->--}}
-            {{--<div class="single_content">--}}
-                {{--<div class="border-layer">--}}
-                    {{--<div class="blink-table">--}}
-                        {{--<div class="blink-table-cell">--}}
-                            {{--<!-- Project Title-->--}}
-                            {{--<div class="project_title">--}}
-                                {{--<a href="#">Project Title</a>--}}
-                                {{--<p>Our all creative project and clean design show at a glance here</p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<!-- Single gallery Item -->--}}
-        {{--<div class="design art portfolio_gallery_iteam">--}}
-            {{--<img src="img/portfolio/gallery-6.jpg" alt="">--}}
-            {{--<!-- single Content-->--}}
-            {{--<div class="single_content">--}}
-                {{--<div class="border-layer">--}}
-                    {{--<div class="blink-table">--}}
-                        {{--<div class="blink-table-cell">--}}
-                            {{--<!-- Project Title-->--}}
-                            {{--<div class="project_title">--}}
-                                {{--<a href="#">Project Title</a>--}}
-                                {{--<p>Our all creative project and clean design show at a glance here</p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<!-- Single gallery Item -->--}}
-        {{--<div class="oth portfolio_gallery_iteam">--}}
-            {{--<img src="img/portfolio/gallery-3.jpg" alt="">--}}
-            {{--<!-- single Content-->--}}
-            {{--<div class="single_content">--}}
-                {{--<div class="border-layer">--}}
-                    {{--<div class="blink-table">--}}
-                        {{--<div class="blink-table-cell">--}}
-                            {{--<!-- Project Title-->--}}
-                            {{--<div class="project_title">--}}
-                                {{--<a href="#">Project Title</a>--}}
-                                {{--<p>Our all creative project and clean design show at a glance here</p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<!-- Single gallery Item -->--}}
-        {{--<div class="design portfolio_gallery_iteam">--}}
-            {{--<img src="img/portfolio/gallery-4.jpg" alt="">--}}
-            {{--<!-- single Content-->--}}
-            {{--<div class="single_content">--}}
-                {{--<div class="border-layer">--}}
-                    {{--<div class="blink-table">--}}
-                        {{--<div class="blink-table-cell">--}}
-                            {{--<!-- Project Title-->--}}
-                            {{--<div class="project_title">--}}
-                                {{--<a href="#">Project Title</a>--}}
-                                {{--<p>Our all creative project and clean design show at a glance here</p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-
-    {{--<!-- Load More Button-->--}}
-    {{--<div class="load_more_button text-center">--}}
-        {{--<a href="#" class="btn blink-btn mt-50">Load More</a>--}}
-    {{--</div>--}}
-{{--</section>--}}
-<!-- ***** Our Creative Portfolio Area End ***** -->
-
-<!-- ***** Cool Facts Area Start ***** -->
-<section class="cool_facts_do_area section_padding_90_50 clearfix jarallax bg-overlay1by4" style="background-image:url(img/bg-img/cool-fact-1.jpg);">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-6 col-lg-3">
-                <!-- Single Cool Fact-->
-                <div class="single_cool_fact text-center">
-                    <div class="right-left-border-shape">
-                        <div class="cool_fact_icon">
-                            <i class="ti-user"></i>
-                        </div>
-                        <!-- Single Cool Detail-->
-                        <div class="cool_fact_detail">
-                            <h3><span class="counter">550</span>+</h3>
-                            <h2>Registered Users</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-lg-3">
-                <!-- Single Cool Fact-->
-                <div class="single_cool_fact text-center">
-                    <div class="right-left-border-shape">
-                        <div class="cool_fact_icon">
-                            <i class="ti-basketball"></i>
-                        </div>
-                        <!-- Single Cool Detail-->
-                        <div class="cool_fact_detail">
-                            <h3><span class="counter">150</span>+</h3>
-                            <h2>Help received</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-lg-3">
-                <!-- Single Cool Fact-->
-                <div class="single_cool_fact text-center">
-                    <div class="right-left-border-shape">
-                        <div class="cool_fact_icon">
-                            <i class="ti-alarm-clock"></i>
-                        </div>
-                        <!-- Single Cool Detail-->
-                        <div class="cool_fact_detail">
-                            <h3><span class="counter">120</span>+</h3>
-                            <h2>Help given</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-lg-3">
-                <!-- Single Cool Fact-->
-                <div class="single_cool_fact text-center">
-                    <div class="right-left-border-shape">
-                        <div class="cool_fact_icon">
-                            <i class="ti-money"></i>
-                        </div>
-                        <!-- Single Cool Detail-->
-                        <div class="cool_fact_detail">
-                            <h3><span class="counter">4,000</span>+</h3>
-                            <h2>Payouts</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ***** Cool Facts Area End ***** -->
-
-<!-- ***** Price table Area Start ***** -->
-{{--<section class="our_price_table section_padding_90_70 clearfix" id="price">--}}
-    {{--<div class="container">--}}
-        {{--<div class="row">--}}
-            {{--<div class="col-12">--}}
-                {{--<!-- Heading Text -->--}}
-                {{--<div class="section-heading text-center">--}}
-                    {{--<h2>Pricing Plane</h2>--}}
-                    {{--<p>Everything that we know about our reality comes by way of our senses. In other words, our entire experience of reality is simply.</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<div class="row justify-content-center">--}}
-            {{--<div class="col-12 col-md-6 col-lg-4">--}}
-                {{--<!-- Package Price  -->--}}
-                {{--<div class="single_price_plan text-center mb-30">--}}
-                    {{--<!-- Package Price -->--}}
-                    {{--<div class="package_price">--}}
-                        {{--<div class="price_icon">--}}
-                            {{--<i class="ti-shine"></i>--}}
-                        {{--</div>--}}
-                        {{--<!-- Package Text -->--}}
-                        {{--<div class="package_text">--}}
-                            {{--<h3>Standard</h3>--}}
-                            {{--<h4>$9.99</h4>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<!-- Package Description -->--}}
-                    {{--<div class="package_description">--}}
-                        {{--<p>15 Email Account</p>--}}
-                        {{--<p>100Gb Space</p>--}}
-                        {{--<p>Domain Name</p>--}}
-                        {{--<p>500Gb Bandwidth</p>--}}
-                        {{--<p>25 MySQL Databases</p>--}}
-                        {{--<p>Enhanced Sercurity</p>--}}
-                        {{--<!-- Price Button  -->--}}
-                        {{--<div class="price_button">--}}
-                            {{--<a href="#" class="btn blink-btn mt-30">Choose Plan</a>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<div class="col-12 col-md-6 col-lg-4">--}}
-                {{--<!-- Package Price  -->--}}
-                {{--<div class="single_price_plan text-center mb-30">--}}
-                    {{--<!-- Package Price -->--}}
-                    {{--<div class="package_price">--}}
-                        {{--<div class="price_icon">--}}
-                            {{--<i class="ti-package"></i>--}}
-                        {{--</div>--}}
-                        {{--<!-- Package Text -->--}}
-                        {{--<div class="package_text">--}}
-                            {{--<h3>Business</h3>--}}
-                            {{--<h4>$36.99</h4>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<!-- Package Description -->--}}
-                    {{--<div class="package_description">--}}
-                        {{--<p>15 Email Account</p>--}}
-                        {{--<p>100Gb Space</p>--}}
-                        {{--<p>Domain Name</p>--}}
-                        {{--<p>500Gb Bandwidth</p>--}}
-                        {{--<p>25 MySQL Databases</p>--}}
-                        {{--<p>Enhanced Sercurity</p>--}}
-                        {{--<!-- Price Button  -->--}}
-                        {{--<div class="price_button">--}}
-                            {{--<a href="#" class="btn blink-btn mt-30">Choose Plan</a>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<div class="col-12 col-md-6 col-lg-4">--}}
-                {{--<!-- Package Price  -->--}}
-                {{--<div class="single_price_plan text-center mb-30">--}}
-                    {{--<!-- Package Price -->--}}
-                    {{--<div class="package_price">--}}
-                        {{--<div class="price_icon">--}}
-                            {{--<i class="ti-world"></i>--}}
-                        {{--</div>--}}
-                        {{--<!-- Package Text -->--}}
-                        {{--<div class="package_text">--}}
-                            {{--<h3>Ultimate</h3>--}}
-                            {{--<h4>$99.99</h4>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<!-- Package Description -->--}}
-                    {{--<div class="package_description">--}}
-                        {{--<p>15 Email Account</p>--}}
-                        {{--<p>100Gb Space</p>--}}
-                        {{--<p>Domain Name</p>--}}
-                        {{--<p>500Gb Bandwidth</p>--}}
-                        {{--<p>25 MySQL Databases</p>--}}
-                        {{--<p>Enhanced Sercurity</p>--}}
-                        {{--<!-- Price Button  -->--}}
-                        {{--<div class="price_button">--}}
-                            {{--<a href="#" class="btn blink-btn mt-30">Choose Plan</a>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</section>--}}
-<!-- ***** Pricing Plane Area End ***** -->
-
-<!-- ***** Product Details Area Start ***** -->
-{{--<section class="service-details-area d-lg-flex clearfix">--}}
-    {{--<!-- Video Area -->--}}
-    {{--<div class="video_area wow fadeInLeftBig animated-img bg-overlay1by3 d-flex align-items-center justify-content-center" data-wow-delay="0.5s" style="background-image: url(img/bg-img/video-1.jpg);">--}}
-        {{--<div class="video-text-icon text-center">--}}
-            {{--<a href="https://youtu.be/jh61R-BXOgE" class="video_button"><i class="ti-control-play"></i></a>--}}
-            {{--<p>Watch Business Review</p>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-
-    {{--<!-- Content Area -->--}}
-    {{--<div class="content-area section_padding_90_100 wow fadeInRightBig" data-wow-delay="1s">--}}
-        {{--<div class="content-details wow fadeIn" data-wow-delay="2s">--}}
-            {{--<!-- Content Section Text Area -->--}}
-            {{--<div class="content-section-text">--}}
-                {{--<h2>It is a modern &amp; creative design.</h2>--}}
-                {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus nam enim quas beatae quasi necessitatibus dolores et porro iure numquam, voluptate autem adipisci odit ea maiores natus quos dicta. Corporis id quas repellat distinctio assumenda magni at aspernatur velit dignissimos dolore rerum, qui, quod minus!</p>--}}
-                {{--<a href="#" class="btn blink-btn white-btn mt-15">Buy Now</a>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</section>--}}
-<!-- ***** More fearutes Area End ***** -->
-<section class="frequently_asked_question section_padding_90_100 clearfix" id="faq">
-    <div class="container">
-        <div class="row">
-            <!-- Heading Text  -->
-            <div class="col-12 text-center">
-                <div class="section-heading">
-                    <h2>Some of our <br>Frequently Asked Question</h2>
-                    <p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Single FAQ -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single_faq">
-                    <h5>How can I apply for a job?</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id magna pretium, pellentesque</p>
-                </div>
-            </div>
-            <!-- Single FAQ -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single_faq">
-                    <h5>How it Work?</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id magna pretium, pellentesque</p>
-                </div>
-            </div>
-            <!-- Single FAQ -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single_faq">
-                    <h5>How Can I Use it?</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id magna pretium, pellentesque</p>
-                </div>
-            </div>
-            <!-- Single FAQ -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single_faq">
-                    <h5>How Can I get it in Online?</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id magna pretium, pellentesque</p>
-                </div>
-            </div>
-            <!-- Single FAQ -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single_faq">
-                    <h5>How Can I Paid my Payment?</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id magna pretium, pellentesque</p>
-                </div>
-            </div>
-            <!-- Single FAQ -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single_faq">
-                    <h5>How can I get my payment easily?</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id magna pretium, pellentesque</p>
-                </div>
-            </div>
-            <!-- Support Button  -->
-            <div class="col-12">
-                <div class="support_text text-center">
-                    <h4>Any Question? <a href="#">Contact us</a></h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ***** Our Team Area Start ***** -->
-{{--<section class="our-team-area section_padding_90_70 clearfix" id="team">--}}
-    {{--<div class="container">--}}
-        {{--<div class="row">--}}
-            {{--<div class="col-12 text-center">--}}
-                {{--<!-- Heading Text  -->--}}
-                {{--<div class="section-heading">--}}
-                    {{--<h2>Meet our expert <br>team member</h2>--}}
-                    {{--<p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales.</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<div class="row">--}}
-            {{--<!-- Single Team Member -->--}}
-            {{--<div class="col-12 col-sm-6 col-lg-3">--}}
-                {{--<div class="single-team-member text-center">--}}
-                    {{--<div class="member-image">--}}
-                        {{--<img src="img/team-img/team-1.jpg" alt="">--}}
-                        {{--<!-- Overlay -->--}}
-                        {{--<div class="team-overlay-effect">--}}
-                            {{--<a href="#"><i class="ti-plus"></i></a>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="member-text">--}}
-                        {{--<h4>NAZRUL ISLAM</h4>--}}
-                        {{--<p>Founder</p>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<!-- Single Team Member -->--}}
-            {{--<div class="col-12 col-sm-6 col-lg-3">--}}
-                {{--<div class="single-team-member text-center">--}}
-                    {{--<div class="member-image">--}}
-                        {{--<img src="img/team-img/team-2.jpg" alt="">--}}
-                        {{--<!-- Overlay -->--}}
-                        {{--<div class="team-overlay-effect">--}}
-                            {{--<a href="#"><i class="ti-plus" aria-hidden="true"></i></a>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="member-text">--}}
-                        {{--<h4>AJOY DAS</h4>--}}
-                        {{--<p>Developer</p>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<!-- Single Team Member -->--}}
-            {{--<div class="col-12 col-sm-6 col-lg-3">--}}
-                {{--<div class="single-team-member text-center">--}}
-                    {{--<div class="member-image">--}}
-                        {{--<img src="img/team-img/team-3.jpg" alt="">--}}
-                        {{--<!-- Overlay -->--}}
-                        {{--<div class="team-overlay-effect">--}}
-                            {{--<a href="#"><i class="ti-plus" aria-hidden="true"></i></a>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="member-text">--}}
-                        {{--<h4>SUNNY KHAN</h4>--}}
-                        {{--<p>Designer</p>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<!-- Single Team Member -->--}}
-            {{--<div class="col-12 col-sm-6 col-lg-3">--}}
-                {{--<div class="single-team-member text-center">--}}
-                    {{--<div class="member-image">--}}
-                        {{--<img src="img/team-img/team-4.jpg" alt="">--}}
-                        {{--<!-- Overlay -->--}}
-                        {{--<div class="team-overlay-effect">--}}
-                            {{--<a href="#"><i class="ti-plus" aria-hidden="true"></i></a>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="member-text">--}}
-                        {{--<h4>NADIRA KHAN</h4>--}}
-                        {{--<p>Advisor</p>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</section>--}}
-<!-- ***** Our Team Area End ***** -->
-
-<!-- ***** Subscribe Area Start ***** -->
-{{--<section class="subscribe-area section_padding_90_100 bg-overlay1by3" style="background-image:url(img/bg-img/subscrib-2.jpg);">--}}
-    {{--<div class="container">--}}
-        {{--<div class="row">--}}
-            {{--<div class="col-12 col-md-10 col-lg-8 ml-auto wow fadeIn" data-wow-delay="1s">--}}
-                {{--<!-- Subscribe Content Text -->--}}
-                {{--<div class="subscribe_content">--}}
-                    {{--<h2>Subscribe For Our New Updates</h2>--}}
-                    {{--<p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales.</p>--}}
-                {{--</div>--}}
-
-                {{--<!-- Form Start -->--}}
-                {{--<form action="#" method="post" class="subscribe-form">--}}
-                    {{--<input type="email" class="email" placeholder="Enter your mail">--}}
-                    {{--<button type="submit" class="submit btn blink-btn w-100">Subscribe Now</button>--}}
-                {{--</form>--}}
-                {{--<!-- Form End -->--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</section>--}}
-<!-- ***** Subscribe Area End ***** -->
-
-<!-- ***** Frequently Asked Question Area ***** -->
-<section class="frequently_asked_question section_padding_90_100 clearfix">
-    <div class="container">
-        <div class="row">
-            <!-- Heading Text  -->
-            <div class="col-12 text-center">
-                <div class="section-heading">
-                    <h2>Some of our <br>Frequently Asked Question</h2>
-                    <p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Single FAQ -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single_faq">
-                    <h5>How can I apply for a job?</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id magna pretium, pellentesque</p>
-                </div>
-            </div>
-            <!-- Single FAQ -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single_faq">
-                    <h5>How it Work?</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id magna pretium, pellentesque</p>
-                </div>
-            </div>
-            <!-- Single FAQ -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single_faq">
-                    <h5>How Can I Use it?</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id magna pretium, pellentesque</p>
-                </div>
-            </div>
-            <!-- Single FAQ -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single_faq">
-                    <h5>How Can I get it in Online?</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id magna pretium, pellentesque</p>
-                </div>
-            </div>
-            <!-- Single FAQ -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single_faq">
-                    <h5>How Can I Paid my Payment?</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id magna pretium, pellentesque</p>
-                </div>
-            </div>
-            <!-- Single FAQ -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single_faq">
-                    <h5>How can I get my payment easily?</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id magna pretium, pellentesque</p>
-                </div>
-            </div>
-            <!-- Support Button  -->
-            <div class="col-12">
-                <div class="support_text text-center">
-                    <h4>Any Question? <a href="#">Contact us</a></h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ***** Frequently Asked Question End ***** -->
 
 <!-- ***** Download App Area Start ***** -->
 <section class="download-apps-area section_padding_90_70 bg-overlay1by3" style="background-image:url(img/bg-img/subscrib-1.jpg);">
@@ -1034,7 +270,6 @@
             <div class="col-12">
                 <div class="section-heading text-center">
                     <h2>What people Say</h2>
-                    <p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales.</p>
                 </div>
             </div>
         </div>
@@ -1047,20 +282,11 @@
                     <div class="single-testimonial">
                         <!-- Testimonial Feedback Text  -->
                         <div class="testimonial-description">
-                            <p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales.</p>
-                            <div class="star-icon">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <span>(80% Recommended)</span>
-                            </div>
-                            <h5>Liean Smith</h5>
-                        </div>
-                        <!-- Testimonial Image -->
-                        <div class="testimonial_image">
-                            <img src="img/test-img/1.jpg" alt="">
+                            <p>
+                                I'm participant of UFC. I provided help of
+                                1000gh and got help of 1600gh within 7 days. UFC, no size!!
+                            </p>
+                            <h5>Esi Amoah</h5>
                         </div>
                     </div>
 
@@ -1068,21 +294,11 @@
                     <div class="single-testimonial">
                         <!-- Testimonial Description Text  -->
                         <div class="testimonial-description">
-                            <p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales.</p>
-                            <!-- Start Icon -->
-                            <div class="star-icon">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                <span>(90% Recommended)</span>
-                            </div>
-                            <h5>John Smith</h5>
-                        </div>
-                        <!-- Testimonial Image -->
-                        <div class="testimonial_image">
-                            <img src="img/test-img/2.jpg" alt="">
+                            <p>
+                                UFC, onaapo!! &#128077; <br>
+                                I have received 60% of my PH in 7 days
+                            </p>
+                            <h5>Samuel Inkoom</h5>
                         </div>
                     </div>
 
@@ -1090,60 +306,15 @@
                     <div class="single-testimonial">
                         <!-- Testimonial Description  -->
                         <div class="testimonial-description">
-                            <p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales.</p>
-                            <!-- Start Icon -->
-                            <div class="star-icon">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <span>(100% Recommended)</span>
-                            </div>
-                            <h5>John Smith</h5>
-                        </div>
-                        <!-- Testimonial Image -->
-                        <div class="testimonial_image">
-                            <img src="img/test-img/3.jpg" alt="">
+                            <p>
+                                I provided help of 600gh, and on the 7th day,
+                                I got help of 960gh.
+                            </p>
+
+                            <h5>Joyce Aban</h5>
                         </div>
                     </div>
 
-                    <!-- Single Testimonial -->
-                    <div class="single-testimonial">
-                        <!-- Testimonial Description  -->
-                        <div class="testimonial-description">
-                            <p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales.</p>
-                            <div class="star-icon">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <span>(70% Recommended)</span>
-                            </div>
-                            <h5>John Smith</h5>
-                        </div>
-                        <!-- Testimonial Image -->
-                        <div class="testimonial_image">
-                            <img src="img/test-img/4.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Our Partner Area Start -->
-        <div class="our-partners-area mt-100">
-            <div class="row justify-content-center">
-                <!-- Partner Slides -->
-                <div class="col-12">
-                    <div class="partners-slides owl-carousel">
-                        <img src="img/partner-img/1.png" alt="">
-                        <img src="img/partner-img/2.png" alt="">
-                        <img src="img/partner-img/3.png" alt="">
-                        <img src="img/partner-img/4.png" alt="">
-                        <img src="img/partner-img/5.png" alt="">
-                    </div>
                 </div>
             </div>
         </div>
@@ -1165,102 +336,116 @@
         </div>
     </div>
 </section>
-<!-- ***** Call To Action area End ***** -->
 
-<!-- ***** Blog Area Start ***** -->
-{{--<section class="blog_area section_padding_90_70" id="blog">--}}
-    {{--<div class="container">--}}
-        {{--<div class="row">--}}
-            {{--<div class="col-12 text-center">--}}
-                {{--<!-- Heading Text  -->--}}
-                {{--<div class="section-heading">--}}
-                    {{--<h2>Blog Area</h2>--}}
-                    {{--<p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales.</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
+<section class="frequently_asked_question section_padding_90_100 clearfix" id="faq">
+    <div class="container">
+        <div class="row">
+            <!-- Heading Text  -->
+            <div class="col-12 text-center">
+                <div class="section-heading">
+                    <h2>Frequently Asked Question</h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
 
-        {{--<div class="row justify-content-center">--}}
-            {{--<!-- Single News Area Start -->--}}
-            {{--<div class="col-12 col-md-6 col-lg-4">--}}
-                {{--<div class="single_latest_news_area mb-30">--}}
-                    {{--<!-- Single Latest Image -->--}}
-                    {{--<div class="single_latest_news_img_area">--}}
-                        {{--<img src="img/blog-img/blog-1.jpg" alt="">--}}
-                        {{--<a href="#">Business</a>--}}
-                    {{--</div>--}}
-                    {{--<!-- Single Latest Text -->--}}
-                    {{--<div class="single_latest_news_text_area">--}}
-                        {{--<a href="#">--}}
-                            {{--<h4>Get Busy with the Business</h4>--}}
-                        {{--</a>--}}
-                        {{--<!-- Post Meta -->--}}
-                        {{--<div class="post-meta">--}}
-                            {{--<a href="#"><i class="fa fa-user" aria-hidden="true"></i> Ajoy Das</a>--}}
-                            {{--<a href="#"><i class="fa fa-calendar-o" aria-hidden="true"></i> 5 Mar, 2018</a>--}}
-                            {{--<a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 350</a>--}}
-                        {{--</div>--}}
-                        {{--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy.Lorem Ipsum is simply dummy text.</p>--}}
-                        {{--<a href="#" class="btn blink-btn mt-15">Read More</a>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+        <div class="row">
+            <!-- Single FAQ -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single_faq">
+                    <h5>How do I register?</h5>
+                    <p>
+                        Visit our page. Click on the signup button on the navigation bar. Fill in required details
+                        and submit.
+                    </p>
+                </div>
+            </div>
+            <!-- Single FAQ -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single_faq">
+                    <h5>What is the return on investment (ROI)?</h5>
+                    <p>
+                        Every participant will earn 60% on each donation made
+                    </p>
+                </div>
+            </div>
+            <!-- Single FAQ -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single_faq">
+                    <h5>How many days does it take to get help?</h5>
+                    <p>
+                        Participants can Get Help (GH) in 7 days after donation.
+                    </p>
+                </div>
+            </div>
+            <!-- Single FAQ -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single_faq">
+                    <h5>Can I create multiple accounts?</h5>
+                    <p>
+                        No. The community does not allow multiple accounts. Usernames, emails and phone number are unique.
+                    </p>
+                </div>
+            </div>
+            <!-- Single FAQ -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single_faq">
+                    <h5>Can I change my account details?</h5>
+                    <p>
+                        Account details cannot be changed after registration, unless participant provides ownership details
+                        through our support page.
+                    </p>
+                </div>
+            </div>
+            <!-- Single FAQ -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single_faq">
+                    <h5>What is the recommitment policy?</h5>
+                    <p>
+                        We have a 100% recommitment policy to help sustain the system.
+                    </p>
+                </div>
+            </div>
 
-            {{--<!-- Single News Area Start -->--}}
-            {{--<div class="col-12 col-md-6 col-lg-4">--}}
-                {{--<div class="single_latest_news_area mb-30">--}}
-                    {{--<!-- Single Latest Image -->--}}
-                    {{--<div class="single_latest_news_img_area">--}}
-                        {{--<img src="img/blog-img/blog-2.jpg" alt="">--}}
-                        {{--<a href="#">Design</a>--}}
-                    {{--</div>--}}
-                    {{--<!-- Single Latest News Text -->--}}
-                    {{--<div class="single_latest_news_text_area">--}}
-                        {{--<a href="#">--}}
-                            {{--<h4>I like to design</h4>--}}
-                        {{--</a>--}}
-                        {{--<!-- Post Meta -->--}}
-                        {{--<div class="post-meta">--}}
-                            {{--<a href="#"><i class="fa fa-user" aria-hidden="true"></i> Ajoy Das</a>--}}
-                            {{--<a href="#"><i class="fa fa-calendar-o" aria-hidden="true"></i> 5 Mar, 2018</a>--}}
-                            {{--<a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 350</a>--}}
-                        {{--</div>--}}
-                        {{--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy.Lorem Ipsum is simply dummy text.</p>--}}
-                        {{--<a href="#" class="btn blink-btn mt-15">Read More</a>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single_faq">
+                    <h5>What happens if I fail to make payment on time?</h5>
+                    <p>
+                        Participants who fail to make payments on time(18hrs after PH), will have their accounts blocked.
+                    </p>
+                </div>
+            </div>
 
-            {{--<!-- Single News Area Start -->--}}
-            {{--<div class="col-12 col-md-6 col-lg-4">--}}
-                {{--<div class="single_latest_news_area mb-30">--}}
-                    {{--<!-- Single Latest Image -->--}}
-                    {{--<div class="single_latest_news_img_area">--}}
-                        {{--<img src="img/blog-img/blog-6.jpg" alt="">--}}
-                        {{--<a href="#">Business</a>--}}
-                    {{--</div>--}}
-                    {{--<!-- Single Latest News Text -->--}}
-                    {{--<div class="single_latest_news_text_area">--}}
-                        {{--<a href="#">--}}
-                            {{--<h4>Get Busy with the Business</h4>--}}
-                        {{--</a>--}}
-                        {{--<!-- Post Meta -->--}}
-                        {{--<div class="post-meta">--}}
-                            {{--<a href="#"><i class="fa fa-user" aria-hidden="true"></i> Ajoy Das</a>--}}
-                            {{--<a href="#"><i class="fa fa-calendar-o" aria-hidden="true"></i> 5 Mar, 2018</a>--}}
-                            {{--<a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 350</a>--}}
-                        {{--</div>--}}
-                        {{--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy.Lorem Ipsum is simply dummy text.</p>--}}
-                        {{--<a href="#" class="btn blink-btn mt-15">Read More</a>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</section>--}}
-<!-- ***** Blog Area End ***** -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single_faq">
+                    <h5>What happens if I don't receive payment within 18 hrs?</h5>
+                    <p>
+                        The system will automatically re-match you to another user to make payment to you.
+                    </p>
+                </div>
+            </div>
 
-<!-- ***** Contact Area Start ***** -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single_faq">
+                    <h5>Should I upload proof of payment (POP) each time I make payment?</h5>
+                    <p>
+                        Yes. Participants are entreated to upload thier proof of payment each time they
+                        successfully make payment. Note that if you fail to upload your POP, receiver can't
+                        confirm your payment.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Support Button  -->
+            <div class="col-12">
+                <div class="support_text text-center">
+                    <h4>Any Question? <a href="#">Contact us</a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="message_now_area bg-gray" id="contact">
     <!-- Google Maps -->
     <div id="googleMap"></div>
@@ -1417,6 +602,4 @@
 <script src="{{URL::asset('js/active.js')}}"></script>
 </body>
 
-
-<!-- Mirrored from demo.designing-world.com/blink3/blink/index-business.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Mar 2018 03:28:49 GMT -->
 </html>
