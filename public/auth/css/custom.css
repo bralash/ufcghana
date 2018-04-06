@@ -6,3 +6,11 @@
     font-style: italic;
     color: tomato;
 }
+.showPass {
+    position: absolute;
+    right: 1px;
+    z-index: 1000;
+    width: 20px;
+    bottom: 15px;
+    opacity: .5;
+}

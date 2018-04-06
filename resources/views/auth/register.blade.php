@@ -114,8 +114,9 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input type="password" name="password" class="form-control required" placeholder="Password">
+                                        <div class="form-group" style="position: relative">
+                                            <img class="showPass" src="{{URL::asset('auth/img/eye.png')}}" alt="">
+                                            <input type="password" name="password" class="form-control required pass" placeholder="Password">
                                         </div>
                                     </div>
                                 </div>

@@ -10,6 +10,15 @@ jQuery(document).ready(function($){
 		window.requestAnimationFrame(layerInit);
 	});
 
+	$('.showPass').on('click', function() {
+		var passAttr = $(this).siblings('.pass').attr('type');
+		if(passAttr == 'password') {
+			$(this).siblings('.pass').attr('type', 'text');
+		} else {
+			$(this).siblings('.pass').attr('type', 'password');
+		}
+	});
+
 	//open/close the menu and cover layers
 	toggleNav.on('click', function(){
 		if(!toggleNav.hasClass('close-nav')) {
