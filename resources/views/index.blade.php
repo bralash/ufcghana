@@ -256,8 +256,8 @@
                     <p>Write something sensible here</p>
                     <!-- Download Button -->
                     <div class="download-btn">
-                        <a href="#" class="btn blink-btn mt-30 mr-15">Create account</a>
-                        <a href="#" class="btn blink-btn mt-30">Login</a>
+                        <a href="{{URL::to('auth/signup')}}" class="btn blink-btn mt-30 mr-15">Create account</a>
+                        <a href="{{URL::to('auth/login')}}" class="btn blink-btn mt-30">Login</a>
                     </div>
                 </div>
             </div>
