@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Auth\Events\Registered;
 
 class UserController extends Controller
 {
@@ -23,5 +28,40 @@ class UserController extends Controller
         $user->password = Hash::make($request->password);
 
         $user->save();
+
+        return redirect('login');
+    }
+
+    public function login(){
+        $rules = array(
+            'email' => 'required|email',
+            'password' => 'required|min:6'
+        );
+
+        $validator = Validator::make(Input::all(), $rules);
+
+        if($validator->fails()) {
+            return Redirect::to('/auth/login')
+                ->withErrors($validator)
+                ->withInput(Input::except('password'));
+        } else {
+            $userdata = array(
+                'email' => Input::get('email'),
+                'password' => Input::get('password')
+            );
+
+            if(Auth::attempt($userdata)) {
+                return redirect('dashboard');
+            } else {
+                return Redirect::to('/auth/login')
+                    ->withErrors($validator)
+                    ->withInput(Input::except('password'));
+            }
+        }
+    }
+
+    public function logout() {
+        Auth::logout();
+        return redirect('/auth/login');
     }
 }

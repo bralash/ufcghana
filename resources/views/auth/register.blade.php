@@ -38,18 +38,11 @@
         <div class="row">
             <div class="col-xs-3">
                 <div id="logo">
-                    <h1 style="margin: 0px;"><a href="{{URL::to('/')}}">UFC</a></h1>
+                    <h3 style="margin: 0px;"><a href="{{URL::to('/')}}">UFC</a></h3>
                 </div>
             </div>
             <div class="col-xs-9">
-                <div id="social">
-                    <ul>
-                        <li><a href="#0"><i class="icon-facebook"></i></a></li>
-                        <li><a href="#0"><i class="icon-twitter"></i></a></li>
-                        <li><a href="#0"><i class="icon-google"></i></a></li>
-                        <li><a href="#0"><i class="icon-linkedin"></i></a></li>
-                    </ul>
-                </div>
+
             </div>
         </div>
     </div>
@@ -135,7 +128,7 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <select name="mm_provider" class="form-control">
+                                            <select name="mm_provider" class="form-control required">
                                                 <option value="">Mobile money providers</option>
                                                 @foreach($providers as $provider)
                                                     <option value="{{$provider->id}}">{{$provider->provider_name}}</option>
@@ -145,7 +138,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" name="acc_name" class="form-control" placeholder="Account Name">
+                                            <input type="text" name="acc_name" class="form-control required" placeholder="Account Name">
                                         </div>
                                     </div>
                                 </div>
@@ -153,7 +146,7 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" name="acc_number" class="form-control" placeholder="Account Number">
+                                            <input type="text" name="acc_number" class="form-control required" placeholder="Account Number">
                                         </div>
                                     </div>
                                 </div>

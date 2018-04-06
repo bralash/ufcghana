@@ -17,6 +17,10 @@ class PagesController extends Controller
 
     public function signUp() {
         $providers = Provider::all();
-        return view('register', compact('providers'));
+        return view('auth.register', compact('providers'));
+    }
+
+    public function login() {
+        return view('auth.login');
     }
 }

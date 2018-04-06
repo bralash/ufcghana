@@ -54,7 +54,11 @@
                                 </li>
                             </ul>
                             <div class="sing-up-button pull-right">
-                                <a href="{{URL::to('signup')}}" class="btn">Sign Up</a>
+                                @if (Auth::check())
+                                    <a href="{{URL::to('dashboard')}}" class="btn btn-secondary">Dashboard</a>
+                                @else
+                                    <a href="{{URL::to('auth/signup')}}" class="btn btn-primary">Sign Up</a>
+                                @endif
                             </div>
                         </div>
                     </nav>
@@ -209,7 +213,7 @@
                         You accept to provide help (PH) to the community through your back office.
                         You click on the Provide Help (PH) button to enter the amount you wish to
                         provide to the community. You will be matched to a corresponding participant
-                        after pledge has been made and payment has to be made withing 24 hours.
+                        after pledge has been made and payment has to be made within 18 hours.
                     </p>
                 </div>
             </div>

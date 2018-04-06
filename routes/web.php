@@ -14,9 +14,17 @@
 Route::group(['middleware' =>['web']], function() {
     Route::get('/', 'PagesController@index');
     Route::get('legality', 'PagesController@legality');
-    Route::get('signup','PagesController@signUp');
 
     Route::group(['prefix' => 'auth'], function() {
+        Route::get('signup','PagesController@signUp');
         Route::post('signup', 'UserController@signup');
+        Route::get('login', 'PagesController@login');
+        Route::post('login', 'UserController@login');
     });
+
+    Route::group(['middleware' => 'auth'], function() {
+        Route::get('dashboard','DashboardController@index');
+        Route::get('auth/logout', 'UserController@logout');
+    });
+
 });
