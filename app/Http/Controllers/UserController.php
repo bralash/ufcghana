@@ -29,7 +29,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('login');
+        return redirect('auth/login');
     }
 
     public function login(){
