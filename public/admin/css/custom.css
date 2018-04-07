@@ -9,6 +9,13 @@ div.user-icon {
     line-height: 59px;
     text-align: center;
     color: #fff;
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: tahoma;
+}
+
+
+@media only screen and (max-width: 430px) {
+    .action-btn button {
+        font-size: 7px;
+    }
 }

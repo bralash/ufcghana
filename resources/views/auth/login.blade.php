@@ -62,7 +62,7 @@
         <div class="row">
             <div class="col-md-5">
                 <div id="left_form">
-                    <figure><img src="{{URL::asset('img/register_wh.png')}}" alt=""></figure>
+                    <figure><img src="{{URL::asset('img/login.png')}}" alt=""></figure>
                     <h2>Login</h2>
                     <p>
                         Provide your login details to access your back office

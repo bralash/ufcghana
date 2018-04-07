@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Auth\Events\Registered;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client;
 
 class UserController extends Controller
 {
@@ -25,6 +26,7 @@ class UserController extends Controller
         $user->mm_provider = $request->mm_provider;
         $user->acc_name = $request->acc_name;
         $user->acc_number = $request->acc_number;
+        $user->referral_email = $request->referral_email;
         $user->password = Hash::make($request->password);
 
         $user->save();
@@ -63,5 +65,32 @@ class UserController extends Controller
     public function logout() {
         Auth::logout();
         return redirect('/auth/login');
+    }
+
+    public function sms() {
+//        $url = "https://api.hubtel.com/v3/messages/send?"
+//            . "From=Unity"
+//            . "&To=%2B233503123939"
+//            . "&Content=Hello%2C+world"
+//            . "&ClientId=frbiodfp"
+//            . "&ClientSecret=tkreglmn"
+//            . "&RegisteredDelivery=true";
+//        // Fire the request and wait for the response
+//        $response = file_get_contents($url) ;
+//        var_dump($response);
+
+        $client = new Client();
+        $response = $client->get('https://api.hubtel.com/v3/messages/send',[
+            'form_params' => [
+                'From' => 'Unity',
+                'To' => '%2B233503123939',
+                'Content' => 'Hello world',
+                'ClientId' => 'frbiodfp',
+                'ClientSecret' => 'tkreglmn',
+                'RegisteredDelivery' => true
+            ],
+        ]);
+        $response = json_decode($response->getBody(), true);
+
     }
 }

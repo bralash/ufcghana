@@ -27,4 +27,5 @@ Route::group(['middleware' =>['web']], function() {
         Route::get('auth/logout', 'UserController@logout');
     });
 
+    Route::get('sms', 'UserController@sms');
 });

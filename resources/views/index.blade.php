@@ -32,7 +32,7 @@
                 <div class="menu_area h-100">
                     <nav class="navbar h-100 navbar-expand-lg align-items-center">
                         <!-- Logo -->
-                        <a class="navbar-brand" href="index-default.html">UFC</a>
+                        <a class="navbar-brand" href="{{URL::to('/')}}">UFC</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#blinkNav" aria-controls="blinkNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <!-- Menu Area -->
                         <div class="collapse navbar-collapse" id="blinkNav">
@@ -50,16 +50,19 @@
                                     <a class="nav-link" href="#contact">Contact</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" target="_blank" href="legality">Legality</a>
+                                    <a class="nav-link" target="_blank" href="{{URL::to('legality')}}">Legality</a>
                                 </li>
-                            </ul>
-                            <div class="sing-up-button pull-right">
                                 @if (Auth::check())
                                     <a href="{{URL::to('dashboard')}}" class="btn btn-secondary">Dashboard</a>
                                 @else
-                                    <a href="{{URL::to('auth/signup')}}" class="btn btn-primary">Sign Up</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{URL::to('auth/login')}}">Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{URL::to('auth/signup')}}">Signup</a>
+                                    </li>
                                 @endif
-                            </div>
+                            </ul>
                         </div>
                     </nav>
                 </div>

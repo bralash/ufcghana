@@ -60,7 +60,9 @@
                     <p>
                         Provide the necessary details to create your account to get access to your back office.
                     </p>
-                    <a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i class="pe-7s-info"></i></a>
+                    <p>
+                        Already registered? <a href="{{URL::to('auth/login')}}" style="color: tomato;">Login</a>
+                    </p>
                 </div>
             </div>
             <div class="col-md-7">
@@ -117,6 +119,14 @@
                                         <div class="form-group" style="position: relative">
                                             <img class="showPass" src="{{URL::asset('auth/img/eye.png')}}" alt="">
                                             <input type="password" name="password" class="form-control required pass" placeholder="Password">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="email" name="referral_email" class="form-control" placeholder="Referral Email">
                                         </div>
                                     </div>
                                 </div>
