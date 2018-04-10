@@ -15,6 +15,30 @@ use GuzzleHttp\Client;
 
 class UserController extends Controller
 {
+    protected function sms($name, $number)
+    {
+        $message = rawurlencode('Hello, welcome to UFC Ghana. Login to your account to begin transactions');
+
+        $from = 'UFC Ghana';
+        $to = '0503123939';
+
+        $curl = curl_init();
+        $clientId = 'cxdvnlbi';
+        $clientSecret = 'vbjytixl';
+        $url = "https://api.hubtel.com/v1/messages/send?From=UFC%20Ghana&To=$to&Content=$message&ClientId=cxdvnlbi&ClientSecret=vbjytixl&RegisteredDelivery=true";
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+        ));
+        curl_exec($curl);
+        curl_close($curl);
+    }
+
     public function signup(Request $request) {
         $user = new User();
 
@@ -30,6 +54,8 @@ class UserController extends Controller
         $user->password = Hash::make($request->password);
 
         $user->save();
+
+        $this->sms($user->firstname, $user->acc_number);
 
         return redirect('auth/login');
     }
@@ -67,55 +93,5 @@ class UserController extends Controller
         return redirect('/auth/login');
     }
 
-//    public function sms() {
-////        $url = "https://api.hubtel.com/v3/messages/send?"
-////            . "From=Unity"
-////            . "&To=%2B233503123939"
-////            . "&Content=Hello%2C+world"
-////            . "&ClientId=frbiodfp"
-////            . "&ClientSecret=tkreglmn"
-////            . "&RegisteredDelivery=true";
-////        // Fire the request and wait for the response
-////        $response = file_get_contents($url) ;
-////        var_dump($response);
-//
-//        $client = new Client();
-//        $response = $client->get('https://api.hubtel.com/v3/messages/send',[
-//            'form_params' => [
-//                'From' => 'Unity',
-//                'To' => '%2B233503123939',
-//                'Content' => 'Hello world',
-//                'ClientId' => 'cxdvnlbi',
-//                'ClientSecret' => 'vbjytixl',
-//                'RegisteredDelivery' => true
-//            ],
-//        ]);
-//        $response = json_decode($response->getBody(), true);
-//
-//    }
-
-    public function sms()
-    {
-        $message = rawurlencode('Hello, welcome to UFC Ghana. Login to your account to begin transactions');
-
-        $from = 'UFC Ghana';
-        $to = '0503123939';
-
-        $curl = curl_init();
-        $clientId = 'cxdvnlbi';
-        $clientSecret = 'vbjytixl';
-        $url = "https://api.hubtel.com/v1/messages/send?From=UFC%20Ghana&To=$to&Content=$message&ClientId=cxdvnlbi&ClientSecret=vbjytixl&RegisteredDelivery=true";
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "GET",
-        ));
-        curl_exec($curl);
-        curl_close($curl);
-    }
 
 }
