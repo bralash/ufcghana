@@ -96,7 +96,7 @@ class UserController extends Controller
 
     public function sms()
     {
-        $message = rawurlencode('Hi Emmanuel this is a test');
+        $message = rawurlencode('Hello, welcome to UFC Ghana. Login to your account to begin transactions');
 
         $from = 'UFC Ghana';
         $to = '0503123939';
@@ -104,7 +104,7 @@ class UserController extends Controller
         $curl = curl_init();
         $clientId = 'cxdvnlbi';
         $clientSecret = 'vbjytixl';
-        $url = "https://api.hubtel.com/v1/messages/send?From=UFC%2C+Ghana&To=$to&Content=Testing&ClientId=cxdvnlbi&ClientSecret=vbjytixl&RegisteredDelivery=true";
+        $url = "https://api.hubtel.com/v1/messages/send?From=$from&To=$to&Content=$message&ClientId=cxdvnlbi&ClientSecret=vbjytixl&RegisteredDelivery=true";
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => true,
