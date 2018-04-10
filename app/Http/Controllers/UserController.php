@@ -99,12 +99,12 @@ class UserController extends Controller
         $message = rawurlencode('Hi Emmanuel this is a test');
 
         $from = 'UFC Ghana';
-        $to = '+233503123939';
+        $to = '0503123939';
 
         $curl = curl_init();
         $clientId = 'cxdvnlbi';
         $clientSecret = 'vbjytixl';
-        $url = "https://api.hubtel.com/v1/messages/send?From=UFC%2C+Ghana&To=%2B233503123939&Content=Testing&ClientId=cxdvnlbi&ClientSecret=vbjytixl&RegisteredDelivery=true";
+        $url = "https://api.hubtel.com/v1/messages/send?From=UFC%2C+Ghana&To=$to&Content=Testing&ClientId=cxdvnlbi&ClientSecret=vbjytixl&RegisteredDelivery=true";
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => true,
