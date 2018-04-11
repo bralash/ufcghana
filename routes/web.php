@@ -20,6 +20,8 @@ Route::group(['middleware' =>['web']], function() {
         Route::post('signup', 'UserController@signup');
         Route::get('login', 'PagesController@login');
         Route::post('login', 'UserController@login');
+        Route::get('verify/{id}','UserController@verify');
+        Route::post('verify','UserController@verifyPhone');
     });
 
     Route::group(['middleware' => 'auth'], function() {

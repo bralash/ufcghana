@@ -35,9 +35,9 @@ class UserController extends Controller
         $to = $number;
 
         $curl = curl_init();
-        $clientId = 'cxdvnlbi';
-        $clientSecret = 'vbjytixl';
-        $url = "https://api.hubtel.com/v1/messages/send?From=UFC%20Ghana&To=$to&Content=$message&ClientId=cxdvnlbi&ClientSecret=vbjytixl&RegisteredDelivery=true";
+        $clientId = env("CLIENTID", "cxdvnlbi");
+        $clientSecret = env("CLIENTSECRET", "vbjytixl");
+        $url = "https://api.hubtel.com/v1/messages/send?From=$from&To=$to&Content=$message&ClientId=$clientId&ClientSecret=$clientSecret&RegisteredDelivery=true";
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => true,
@@ -69,6 +69,7 @@ class UserController extends Controller
         $name = $request->firstname .' '. $request->surname;
         $number = $request->acc_number;
         $user->save();
+        Auth::login($user);
 
         $verification->user_id = $user->id;
         $verification->v_code = $this->code(4);
@@ -79,7 +80,7 @@ class UserController extends Controller
 
         $this->sms($name, $number,$verification->v_code);
 
-        return redirect('auth/login');
+        return redirect('auth/verify/'.Auth::user()->id);
     }
 
     public function login(){
@@ -117,6 +118,22 @@ class UserController extends Controller
 
     public function test() {
         return $this->code(4);
+    }
+
+    public function verify() {
+        $verify = Verification::where('user_id',Auth::user()->id)->orderBy('id','desc')->first();
+        if(Carbon::now()->gt($verify->expiry_date)) {
+            abort(404);
+        } return 'Lesser';
+    }
+
+    public function verifyPhone(Request $request) {
+        $code = Verification::where('user_id',Auth::user()->id)->orderBy('id','desc')->first();
+        if($request->v_code == $code->v_code) {
+            return 'dashboard';
+        }
+        return Redirect::to('/auth/verify/'.Auth::user()->id)
+            ->withErrors(['Wrong verification code']);
     }
 
 
