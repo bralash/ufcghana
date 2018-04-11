@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Verification;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\User;
@@ -12,12 +13,23 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
+use Twilio;
 
 class UserController extends Controller
 {
-    protected function sms($name, $number)
+    protected function code($digits) {
+        $temp = "";
+
+        for ($i = 0; $i < $digits; $i++) {
+            $temp .= rand(0, 9);
+        }
+
+        return (int)$temp;
+    }
+
+    protected function sms($name, $number, $code)
     {
-        $message = rawurlencode('Hello, welcome to UFC Ghana. Login to your account to begin transactions');
+        $message = rawurlencode('Hello '.$name.'. Your UFC Ghana verification code is: '.$code);
 
         $from = 'UFC Ghana';
         $to = '0503123939';
@@ -41,6 +53,7 @@ class UserController extends Controller
 
     public function signup(Request $request) {
         $user = new User();
+        $verification = new Verification();
 
         $user->firstname = $request->firstname;
         $user->surname = $request->surname;
@@ -55,7 +68,12 @@ class UserController extends Controller
 
         $user->save();
 
-        $this->sms($user->firstname, $user->acc_number);
+        $verification->user_id = $user->id;
+        $verification->v_code = $this->code(4);
+
+        $verification->save();
+
+        $this->sms($user->firstname, $user->acc_number,$verification->v_code);
 
         return redirect('auth/login');
     }
@@ -91,6 +109,10 @@ class UserController extends Controller
     public function logout() {
         Auth::logout();
         return redirect('/auth/login');
+    }
+
+    public function test() {
+        return $this->code(4);
     }
 
 
