@@ -53,7 +53,7 @@
                                     <a class="nav-link" target="_blank" href="{{URL::to('legality')}}">Legality</a>
                                 </li>
                                 @if (Auth::check())
-                                    <a href="{{URL::to('dashboard')}}" class="btn btn-secondary">Dashboard</a>
+                                    <a href="{{URL::to('dashboard')}}" class="nav-link">Dashboard</a>
                                 @else
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{URL::to('auth/login')}}">Login</a>
