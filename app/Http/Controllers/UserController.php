@@ -32,7 +32,7 @@ class UserController extends Controller
         $message = rawurlencode('Hello '.$name.'. Your UFC Ghana verification code is: '.$code);
 
         $from = 'UFC Ghana';
-        $to = '0503123939';
+        $to = $number;
 
         $curl = curl_init();
         $clientId = 'cxdvnlbi';
@@ -66,6 +66,8 @@ class UserController extends Controller
         $user->referral_email = $request->referral_email;
         $user->password = Hash::make($request->password);
 
+        $name = $request->firstname .' '. $request->surname;
+        $number = $request->acc_number;
         $user->save();
 
         $verification->user_id = $user->id;
@@ -75,7 +77,7 @@ class UserController extends Controller
 
         $verification->save();
 
-        $this->sms($user->firstname, $user->acc_number,$verification->v_code);
+        $this->sms($name, $number,$verification->v_code);
 
         return redirect('auth/login');
     }
