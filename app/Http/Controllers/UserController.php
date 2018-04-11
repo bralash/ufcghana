@@ -70,6 +70,8 @@ class UserController extends Controller
 
         $verification->user_id = $user->id;
         $verification->v_code = $this->code(4);
+        $carbon_date = Carbon::parse(Carbon::now());
+        $verification->expiry_date = $carbon_date->addHours(24);
 
         $verification->save();
 
